@@ -90,7 +90,7 @@
 <meta property="og:site_name" content="tiramisu-navy">
 <meta property="og:description" content="背景mysql版本号字段类型是varchar,app版本号规则如下：   7.1.1 7.1 7.0.10 7.0.10 7.0.1 7.0 6.9.5   产生的问题是:筛选出&amp;lt;7.9.10版本号,7.9.9,7.9.8等等就不在范围之内 问题解决原理：取每组版本号并向前补0至N位（例子中补10位）  X.XX.XXX &amp;gt; 7.9.12 ‘000000000X00000000XX00">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-27T08:13:56.000Z">
+<meta property="og:updated_time" content="2018-09-30T03:51:42.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="mysql字符串类型比较问题—app版本号">
 <meta name="twitter:description" content="背景mysql版本号字段类型是varchar,app版本号规则如下：   7.1.1 7.1 7.0.10 7.0.10 7.0.1 7.0 6.9.5   产生的问题是:筛选出&amp;lt;7.9.10版本号,7.9.9,7.9.8等等就不在范围之内 问题解决原理：取每组版本号并向前补0至N位（例子中补10位）  X.XX.XXX &amp;gt; 7.9.12 ‘000000000X00000000XX00">
@@ -351,7 +351,7 @@
 <li>X.XX.XXX &gt; 7.9.12</li>
 <li>‘000000000X00000000XX0000000XXX’ &gt; ‘000000000700000000090000000012’</li>
 </ul>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	* </span><br><span class="line">FROM</span><br><span class="line">	robot_guide_words </span><br><span class="line">WHERE</span><br><span class="line">	CONCAT(</span><br><span class="line">	LPAD( SUBSTRING_INDEX( SUBSTRING_INDEX( version, &apos;.&apos;, 1 ), &apos;.&apos;, - 1 ), 10, &apos;0&apos; ),</span><br><span class="line">	LPAD( SUBSTRING_INDEX( SUBSTRING_INDEX( version, &apos;.&apos;, 2 ), &apos;.&apos;, - 1 ), 10, &apos;0&apos; ),</span><br><span class="line">	LPAD( SUBSTRING_INDEX( SUBSTRING_INDEX( version, &apos;.&apos;, 3 ), &apos;.&apos;, - 1 ), 10, &apos;0&apos; ) </span><br><span class="line">	) &gt; CONCAT( LPAD( 7, 10, &apos;0&apos; ), LPAD( 9, 10, &apos;0&apos; ), LPAD( 12, 10, &apos;0&apos; ) );</span><br></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">SELECT</span><br><span class="line">	* </span><br><span class="line">FROM</span><br><span class="line">	table</span><br><span class="line">WHERE</span><br><span class="line">	CONCAT(</span><br><span class="line">	LPAD( SUBSTRING_INDEX( SUBSTRING_INDEX( version, &apos;.&apos;, 1 ), &apos;.&apos;, - 1 ), 10, &apos;0&apos; ),</span><br><span class="line">	LPAD( SUBSTRING_INDEX( SUBSTRING_INDEX( version, &apos;.&apos;, 2 ), &apos;.&apos;, - 1 ), 10, &apos;0&apos; ),</span><br><span class="line">	LPAD( SUBSTRING_INDEX( SUBSTRING_INDEX( version, &apos;.&apos;, 3 ), &apos;.&apos;, - 1 ), 10, &apos;0&apos; ) </span><br><span class="line">	) &gt; CONCAT( LPAD( 7, 10, &apos;0&apos; ), LPAD( 9, 10, &apos;0&apos; ), LPAD( 12, 10, &apos;0&apos; ) );</span><br></pre></td></tr></table></figure>
 
       
     </div>
