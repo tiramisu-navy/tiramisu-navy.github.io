@@ -83,19 +83,19 @@
 
 
 
-<meta name="description" content="1.例子   工资（X1 年龄（X2） 额度（Y）     4000 25 20000    8000 30 45000    5000 27 25000     2.通俗解释X1,X2是两个特征,找到最合适的一条线来拟合数据点  3.误差误差ε是独立并且具有相同的分布,并且服从均值为0,方差为Θ2的高斯分布">
+<meta name="description" content="1.例子   工资（X1) 年龄（X2） 额度（Y）      4000 25 20000      8000 30 45000      5000 27 25000         2.通俗解释X1,X2是两个特征,找到最合适的一条线来拟合数据点  3.误差误差ε是独立并且具有相同的分布,并且服从均值为0,方差为Θ2的高斯分布">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法数学理论—线性回归">
 <meta property="og:url" content="http://yoursite.com/2018/09/27/linear-regression/index.html">
 <meta property="og:site_name" content="tiramisu-navy">
-<meta property="og:description" content="1.例子   工资（X1 年龄（X2） 额度（Y）     4000 25 20000    8000 30 45000    5000 27 25000     2.通俗解释X1,X2是两个特征,找到最合适的一条线来拟合数据点  3.误差误差ε是独立并且具有相同的分布,并且服从均值为0,方差为Θ2的高斯分布">
+<meta property="og:description" content="1.例子   工资（X1) 年龄（X2） 额度（Y）      4000 25 20000      8000 30 45000      5000 27 25000         2.通俗解释X1,X2是两个特征,找到最合适的一条线来拟合数据点  3.误差误差ε是独立并且具有相同的分布,并且服从均值为0,方差为Θ2的高斯分布">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/plan_formula.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/error.jpg">
-<meta property="og:updated_time" content="2018-12-11T09:21:06.125Z">
+<meta property="og:updated_time" content="2018-12-11T09:24:39.831Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法数学理论—线性回归">
-<meta name="twitter:description" content="1.例子   工资（X1 年龄（X2） 额度（Y）     4000 25 20000    8000 30 45000    5000 27 25000     2.通俗解释X1,X2是两个特征,找到最合适的一条线来拟合数据点  3.误差误差ε是独立并且具有相同的分布,并且服从均值为0,方差为Θ2的高斯分布">
+<meta name="twitter:description" content="1.例子   工资（X1) 年龄（X2） 额度（Y）      4000 25 20000      8000 30 45000      5000 27 25000         2.通俗解释X1,X2是两个特征,找到最合适的一条线来拟合数据点  3.误差误差ε是独立并且具有相同的分布,并且服从均值为0,方差为Θ2的高斯分布">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/plan_formula.jpg">
 
 
@@ -339,29 +339,26 @@
         <h3 id="1-例子"><a href="#1-例子" class="headerlink" title="1.例子"></a>1.例子</h3><table>
 <thead>
 <tr>
-<th style="text-align:left">工资（X1</th>
+<th style="text-align:left">工资（X1)</th>
 <th style="text-align:right">年龄（X2）</th>
-<th style="text-align:right">额度（Y）</th>
+<th>额度（Y） </th>
 </tr>
 </thead>
 <tbody>
 <tr>
 <td style="text-align:left">4000</td>
 <td style="text-align:right">25</td>
-<td style="text-align:right">20000</td>
-<td></td>
+<td>20000   </td>
 </tr>
 <tr>
 <td style="text-align:left">8000</td>
 <td style="text-align:right">30</td>
-<td style="text-align:right">45000</td>
-<td></td>
+<td>45000   </td>
 </tr>
 <tr>
 <td style="text-align:left">5000</td>
 <td style="text-align:right">27</td>
-<td style="text-align:right">25000</td>
-<td></td>
+<td>25000     </td>
 </tr>
 </tbody>
 </table>
