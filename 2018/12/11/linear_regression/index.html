@@ -83,19 +83,21 @@
 
 
 
-<meta name="description" content="1.例子   工资（X1) 年龄（X2） 额度（Y）      4000 25 20000      8000 30 45000      5000 27 25000         2.通俗解释X1,X2是两个特征,找到最合适的一条线来拟合数据点  3.误差误差ε是独立并且具有相同的分布,并且服从均值为0,方差为Θ2的高斯分布">
+<meta name="description" content="1.例子   工资（X1) 年龄（X2） 额度（Y）      4000 25 20000      8000 30 45000      5000 27 25000         2.通俗解释X1,X2是两个特征,找到最合适的一条线来拟合数据点  3.误差误差ε是独立并且具有相同的分布,并且服从均值为0,方差为Θ2的高斯分布 4.推导过程 4.1 似然函数:根据样本估计参数值,观测数据,由数据">
 <meta property="og:type" content="article">
 <meta property="og:title" content="算法数学理论—线性回归">
 <meta property="og:url" content="http://yoursite.com/2018/12/11/linear_regression/index.html">
 <meta property="og:site_name" content="tiramisu-navy">
-<meta property="og:description" content="1.例子   工资（X1) 年龄（X2） 额度（Y）      4000 25 20000      8000 30 45000      5000 27 25000         2.通俗解释X1,X2是两个特征,找到最合适的一条线来拟合数据点  3.误差误差ε是独立并且具有相同的分布,并且服从均值为0,方差为Θ2的高斯分布">
+<meta property="og:description" content="1.例子   工资（X1) 年龄（X2） 额度（Y）      4000 25 20000      8000 30 45000      5000 27 25000         2.通俗解释X1,X2是两个特征,找到最合适的一条线来拟合数据点  3.误差误差ε是独立并且具有相同的分布,并且服从均值为0,方差为Θ2的高斯分布 4.推导过程 4.1 似然函数:根据样本估计参数值,观测数据,由数据">
 <meta property="og:locale" content="default">
 <meta property="og:image" content="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/plan_formula.jpg">
 <meta property="og:image" content="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/error.jpg">
-<meta property="og:updated_time" content="2018-12-11T09:32:07.682Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/deduction_1.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/deduction_2.jpg">
+<meta property="og:updated_time" content="2018-12-11T12:19:55.391Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="算法数学理论—线性回归">
-<meta name="twitter:description" content="1.例子   工资（X1) 年龄（X2） 额度（Y）      4000 25 20000      8000 30 45000      5000 27 25000         2.通俗解释X1,X2是两个特征,找到最合适的一条线来拟合数据点  3.误差误差ε是独立并且具有相同的分布,并且服从均值为0,方差为Θ2的高斯分布">
+<meta name="twitter:description" content="1.例子   工资（X1) 年龄（X2） 额度（Y）      4000 25 20000      8000 30 45000      5000 27 25000         2.通俗解释X1,X2是两个特征,找到最合适的一条线来拟合数据点  3.误差误差ε是独立并且具有相同的分布,并且服从均值为0,方差为Θ2的高斯分布 4.推导过程 4.1 似然函数:根据样本估计参数值,观测数据,由数据">
 <meta name="twitter:image" content="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/plan_formula.jpg">
 
 
@@ -364,6 +366,8 @@
 </table>
 <h3 id="2-通俗解释"><a href="#2-通俗解释" class="headerlink" title="2.通俗解释"></a>2.通俗解释</h3><p>X1,X2是两个特征,找到最合适的一条线来拟合数据点<br> <img src="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/plan_formula.jpg" alt="image"></p>
 <h3 id="3-误差"><a href="#3-误差" class="headerlink" title="3.误差"></a>3.误差</h3><p>误差ε是独立并且具有相同的分布,并且服从均值为0,方差为Θ2的高斯分布<br><img src="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/error.jpg" alt="image"></p>
+<h3 id="4-推导过程"><a href="#4-推导过程" class="headerlink" title="4.推导过程"></a>4.推导过程</h3><p><img src="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/deduction_1.jpg" alt="image"></p>
+<h4 id="4-1-似然函数-根据样本估计参数值-观测数据-由数据推导-什么样的参数数据组合后恰好是真实值"><a href="#4-1-似然函数-根据样本估计参数值-观测数据-由数据推导-什么样的参数数据组合后恰好是真实值" class="headerlink" title="4.1 似然函数:根据样本估计参数值,观测数据,由数据推导,什么样的参数数据组合后恰好是真实值"></a>4.1 似然函数:根据样本估计参数值,观测数据,由数据推导,什么样的参数数据组合后恰好是真实值</h4><h4 id="4-2-对数函数-对数里面乘法可以转换成加法"><a href="#4-2-对数函数-对数里面乘法可以转换成加法" class="headerlink" title="4.2 对数函数:对数里面乘法可以转换成加法"></a>4.2 对数函数:对数里面乘法可以转换成加法</h4><p><img src="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/deduction_2.jpg" alt="image"></p>
 
       
     </div>
@@ -510,7 +514,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-例子"><span class="nav-number">1.</span> <span class="nav-text">1.例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-通俗解释"><span class="nav-number">2.</span> <span class="nav-text">2.通俗解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-误差"><span class="nav-number">3.</span> <span class="nav-text">3.误差</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-例子"><span class="nav-number">1.</span> <span class="nav-text">1.例子</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-通俗解释"><span class="nav-number">2.</span> <span class="nav-text">2.通俗解释</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-误差"><span class="nav-number">3.</span> <span class="nav-text">3.误差</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#4-推导过程"><span class="nav-number">4.</span> <span class="nav-text">4.推导过程</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#4-1-似然函数-根据样本估计参数值-观测数据-由数据推导-什么样的参数数据组合后恰好是真实值"><span class="nav-number">4.1.</span> <span class="nav-text">4.1 似然函数:根据样本估计参数值,观测数据,由数据推导,什么样的参数数据组合后恰好是真实值</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#4-2-对数函数-对数里面乘法可以转换成加法"><span class="nav-number">4.2.</span> <span class="nav-text">4.2 对数函数:对数里面乘法可以转换成加法</span></a></li></ol></li></ol></div>
             
 
           </div>
