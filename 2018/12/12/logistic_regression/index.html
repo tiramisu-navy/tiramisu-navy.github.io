@@ -83,17 +83,22 @@
 
 
 
-<meta name="description" content="个人简介 坐标：  杭州 公司： 宝宝树杭州分公司 岗位： Java攻城狮 QQ &amp;amp; Wechat： 770439312 座右铭： Every day to be a little better">
-<meta property="og:type" content="website">
-<meta property="og:title" content="tiramisu-navy">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta name="description" content="1.引入机器学习首选的算法是逻辑回归，先逻辑回归再用复杂的，能简单还是用简单的，决策边界可以是非线性 2.Sigmoid函数 解决二分类问题，比如YES-NO类型的问题      3.多分类的softmax 解决具有多个选项的问题，比如出生地是波士顿、伦敦还是悉尼">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法数学理论—逻辑回归">
+<meta property="og:url" content="http://yoursite.com/2018/12/12/logistic_regression/index.html">
 <meta property="og:site_name" content="tiramisu-navy">
-<meta property="og:description" content="个人简介 坐标：  杭州 公司： 宝宝树杭州分公司 岗位： Java攻城狮 QQ &amp;amp; Wechat： 770439312 座右铭： Every day to be a little better">
+<meta property="og:description" content="1.引入机器学习首选的算法是逻辑回归，先逻辑回归再用复杂的，能简单还是用简单的，决策边界可以是非线性 2.Sigmoid函数 解决二分类问题，比如YES-NO类型的问题      3.多分类的softmax 解决具有多个选项的问题，比如出生地是波士顿、伦敦还是悉尼">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-27T06:09:16.000Z">
+<meta property="og:image" content="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/sigmoid.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/sigmoid1.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/sigmoid2.jpg">
+<meta property="og:image" content="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/softmax.jpg">
+<meta property="og:updated_time" content="2018-12-12T12:07:01.258Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tiramisu-navy">
-<meta name="twitter:description" content="个人简介 坐标：  杭州 公司： 宝宝树杭州分公司 岗位： Java攻城狮 QQ &amp;amp; Wechat： 770439312 座右铭： Every day to be a little better">
+<meta name="twitter:title" content="算法数学理论—逻辑回归">
+<meta name="twitter:description" content="1.引入机器学习首选的算法是逻辑回归，先逻辑回归再用复杂的，能简单还是用简单的，决策边界可以是非线性 2.Sigmoid函数 解决二分类问题，比如YES-NO类型的问题      3.多分类的softmax 解决具有多个选项的问题，比如出生地是波士顿、伦敦还是悉尼">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/sigmoid.jpg">
 
 
 
@@ -123,13 +128,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/12/logistic_regression/"/>
 
 
 
 
 
-  <title> | tiramisu-navy</title>
+  <title>算法数学理论—逻辑回归 | tiramisu-navy</title>
   
 
 
@@ -254,40 +259,148 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/12/logistic_regression/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tiramisu-navy">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <h2 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h2><ul>
-<li><strong>坐标：</strong>  杭州</li>
-<li><strong>公司：</strong> 宝宝树杭州分公司</li>
-<li><strong>岗位：</strong> Java攻城狮</li>
-<li><strong>QQ &amp; Wechat：</strong> 770439312</li>
-<li><strong>座右铭：</strong> Every day to be a little better</li>
+          <h1 class="post-title" itemprop="name headline">算法数学理论—逻辑回归</h1>
+        
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-12T17:58:10+08:00">
+                2018-12-12
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
+      
+      
+
+      
+        <h3 id="1-引入"><a href="#1-引入" class="headerlink" title="1.引入"></a>1.引入</h3><p>机器学习首选的算法是逻辑回归，先逻辑回归再用复杂的，能简单还是用简单的，决策边界可以是非线性</p>
+<h3 id="2-Sigmoid函数"><a href="#2-Sigmoid函数" class="headerlink" title="2.Sigmoid函数"></a>2.Sigmoid函数</h3><ul>
+<li><p>解决二分类问题，比如YES-NO类型的问题</p>
+<p><img src="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/sigmoid.jpg" alt="image"></p>
+<p><img src="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/sigmoid1.jpg" alt="image"></p>
+<p><img src="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/sigmoid2.jpg" alt="image"></p>
+</li>
+</ul>
+<h3 id="3-多分类的softmax"><a href="#3-多分类的softmax" class="headerlink" title="3.多分类的softmax"></a>3.多分类的softmax</h3><ul>
+<li>解决具有多个选项的问题，比如出生地是波士顿、伦敦还是悉尼<br><img src="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/softmax.jpg" alt="image"></li>
 </ul>
 
-        
-      </div>
-      
-      
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/12/gradient_descent/" rel="next" title="算法数学理论—梯度下降">
+                <i class="fa fa-chevron-left"></i> 算法数学理论—梯度下降
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -382,7 +495,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#个人简介"><span class="nav-number">1.</span> <span class="nav-text">个人简介</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-引入"><span class="nav-number">1.</span> <span class="nav-text">1.引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-Sigmoid函数"><span class="nav-number">2.</span> <span class="nav-text">2.Sigmoid函数</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-多分类的softmax"><span class="nav-number">3.</span> <span class="nav-text">3.多分类的softmax</span></a></li></ol></div>
             
 
           </div>
