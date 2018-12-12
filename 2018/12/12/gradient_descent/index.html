@@ -83,13 +83,19 @@
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="tiramisu-navy">
-<meta property="og:url" content="http://yoursite.com/archives/2018/09/index.html">
+<meta name="description" content="1.引入交给机器一堆数据，然后告诉它什么样的学习方式是对的(目标函数)，然后让它朝着这个方向去做，每次优化一点点，累积起来就是个大成绩，最后什么样的参数能使得目标函数达到极值点 2.梯度下降方法  3.总结 学习率(步长):对结果会产生巨大的影响，一般小一些 如何选择:从小的时候，不行再小 批处理数量:32，64，128都可以，很多 时候还得考虑内存和效率">
+<meta property="og:type" content="article">
+<meta property="og:title" content="算法数学理论—梯度下降">
+<meta property="og:url" content="http://yoursite.com/2018/12/12/gradient_descent/index.html">
 <meta property="og:site_name" content="tiramisu-navy">
+<meta property="og:description" content="1.引入交给机器一堆数据，然后告诉它什么样的学习方式是对的(目标函数)，然后让它朝着这个方向去做，每次优化一点点，累积起来就是个大成绩，最后什么样的参数能使得目标函数达到极值点 2.梯度下降方法  3.总结 学习率(步长):对结果会产生巨大的影响，一般小一些 如何选择:从小的时候，不行再小 批处理数量:32，64，128都可以，很多 时候还得考虑内存和效率">
 <meta property="og:locale" content="default">
+<meta property="og:image" content="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/descend.jpg">
+<meta property="og:updated_time" content="2018-12-12T09:55:15.639Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="tiramisu-navy">
+<meta name="twitter:title" content="算法数学理论—梯度下降">
+<meta name="twitter:description" content="1.引入交给机器一堆数据，然后告诉它什么样的学习方式是对的(目标函数)，然后让它朝着这个方向去做，每次优化一点点，累积起来就是个大成绩，最后什么样的参数能使得目标函数达到极值点 2.梯度下降方法  3.总结 学习率(步长):对结果会产生巨大的影响，一般小一些 如何选择:从小的时候，不行再小 批处理数量:32，64，128都可以，很多 时候还得考虑内存和效率">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/descend.jpg">
 
 
 
@@ -119,13 +125,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/archives/2018/09/"/>
+  <link rel="canonical" href="http://yoursite.com/2018/12/12/gradient_descent/"/>
 
 
 
 
 
-  <title>Archive | tiramisu-navy</title>
+  <title>算法数学理论—梯度下降 | tiramisu-navy</title>
   
 
 
@@ -144,7 +150,7 @@
     
   
 
-  <div class="container sidebar-position-left page-archive">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -248,74 +254,147 @@
           <div id="content" class="content">
             
 
+  <div id="posts" class="posts-expand">
+    
+
+  
+
   
   
   
-  <div class="post-block archive">
-    <div id="posts" class="posts-collapse">
-      <span class="archive-move-on"></span>
-
-      <span class="archive-page-counter">
-        
-        
-        
-          
-        
-        Um..! 3 posts in total. Keep on posting.
-      </span>
-
-      
-
-        
-        
-        
-
-        
-          
-          <div class="collection-title">
-            <h1 class="archive-year" id="archive-year-2018">2018</h1>
-          </div>
-        
-        
-
-        
 
   <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-    <header class="post-header">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2018/12/12/gradient_descent/">
 
-      <h2 class="post-title">
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tiramisu-navy">
+    </span>
+
+    
+      <header class="post-header">
+
         
-            <a class="post-title-link" href="/2018/09/27/mysql-compare-version(varchar)/" itemprop="url">
-              
-                <span itemprop="name">mysql字符串类型比较问题—app版本号</span>
-              
-            </a>
         
-      </h2>
+          <h1 class="post-title" itemprop="name headline">算法数学理论—梯度下降</h1>
+        
 
-      <div class="post-meta">
-        <time class="post-time" itemprop="dateCreated"
-              datetime="2018-09-27T16:13:45+08:00"
-              content="2018-09-27" >
-          09-27
-        </time>
-      </div>
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2018-12-12T17:24:23+08:00">
+                2018-12-12
+              </time>
+            
 
-    </header>
-  </article>
+            
 
+            
+          </span>
 
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
 
       
+      
 
+      
+        <h3 id="1-引入"><a href="#1-引入" class="headerlink" title="1.引入"></a>1.引入</h3><p>交给机器一堆数据，然后告诉它什么样的学习方式是对的(目标函数)，然后让它朝着这个方向去做，每次优化一点点，累积起来就是个大成绩，最后什么样的参数能使得目标函数达到极值点</p>
+<h3 id="2-梯度下降方法"><a href="#2-梯度下降方法" class="headerlink" title="2.梯度下降方法"></a>2.梯度下降方法</h3><p> <img src="https://raw.githubusercontent.com/tiramisu-navy/image-collection/master/algorithm_base/linear_regression/descend.jpg" alt="image"></p>
+<h3 id="3-总结"><a href="#3-总结" class="headerlink" title="3.总结"></a>3.总结</h3><ul>
+<li>学习率(步长):对结果会产生巨大的影响，一般小一些</li>
+<li>如何选择:从小的时候，不行再小</li>
+<li>批处理数量:32，64，128都可以，很多 时候还得考虑内存和效率</li>
+</ul>
+
+      
     </div>
+    
+    
+    
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/11/linear_regression/" rel="next" title="算法数学理论—线性回归">
+                <i class="fa fa-chevron-left"></i> 算法数学理论—线性回归
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
   </div>
   
   
   
+  </article>
 
-  
 
+
+    <div class="post-spread">
+      
+    </div>
+  </div>
 
 
           </div>
@@ -323,6 +402,10 @@
 
 
           
+
+  
+
+
 
         </div>
         
@@ -343,8 +426,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            Table of Contents
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            Overview
+          </li>
+        </ul>
+      
 
-      <section class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <section class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -386,6 +478,22 @@
         </div>
       </section>
 
+      
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-引入"><span class="nav-number">1.</span> <span class="nav-text">1.引入</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-梯度下降方法"><span class="nav-number">2.</span> <span class="nav-text">2.梯度下降方法</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3-总结"><span class="nav-number">3.</span> <span class="nav-text">3.总结</span></a></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
       
 
       
@@ -527,6 +635,10 @@
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.4"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.4"></script>
+
+
 
   
 
