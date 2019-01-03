@@ -83,17 +83,17 @@
 
 
 
-<meta name="description" content="个人简介 坐标：  杭州 公司： 宝宝树杭州分公司 岗位： Java攻城狮 QQ &amp;amp; Wechat： 770439312 座右铭： Every day to be a little better">
-<meta property="og:type" content="website">
+<meta name="description" content="title: 逻辑回归模型–信用卡交易数据异常检测 1.原始数据12345678910111213141516import pandas as pdimport matplotlib.pyplot as pltimport numpy as npdata = pd.read_csv(&amp;quot;creditcard.csv&amp;quot;)print(&amp;quot;前5行数据:\n&amp;quot;,dat">
+<meta property="og:type" content="article">
 <meta property="og:title" content="tiramisu-navy">
-<meta property="og:url" content="http://yoursite.com/about/index.html">
+<meta property="og:url" content="http://yoursite.com/2019/01/03/credit_card_transaction_data_check/index.html">
 <meta property="og:site_name" content="tiramisu-navy">
-<meta property="og:description" content="个人简介 坐标：  杭州 公司： 宝宝树杭州分公司 岗位： Java攻城狮 QQ &amp;amp; Wechat： 770439312 座右铭： Every day to be a little better">
+<meta property="og:description" content="title: 逻辑回归模型–信用卡交易数据异常检测 1.原始数据12345678910111213141516import pandas as pdimport matplotlib.pyplot as pltimport numpy as npdata = pd.read_csv(&amp;quot;creditcard.csv&amp;quot;)print(&amp;quot;前5行数据:\n&amp;quot;,dat">
 <meta property="og:locale" content="default">
-<meta property="og:updated_time" content="2018-09-27T06:09:16.000Z">
+<meta property="og:updated_time" content="2019-01-03T03:43:41.108Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="tiramisu-navy">
-<meta name="twitter:description" content="个人简介 坐标：  杭州 公司： 宝宝树杭州分公司 岗位： Java攻城狮 QQ &amp;amp; Wechat： 770439312 座右铭： Every day to be a little better">
+<meta name="twitter:description" content="title: 逻辑回归模型–信用卡交易数据异常检测 1.原始数据12345678910111213141516import pandas as pdimport matplotlib.pyplot as pltimport numpy as npdata = pd.read_csv(&amp;quot;creditcard.csv&amp;quot;)print(&amp;quot;前5行数据:\n&amp;quot;,dat">
 
 
 
@@ -123,7 +123,7 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/about/"/>
+  <link rel="canonical" href="http://yoursite.com/2019/01/03/credit_card_transaction_data_check/"/>
 
 
 
@@ -254,40 +254,141 @@
 
   <div id="posts" class="posts-expand">
     
+
+  
+
+  
+  
+  
+
+  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
+  
+  
+  
+  <div class="post-block">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2019/01/03/credit_card_transaction_data_check/">
+
+    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
+      <meta itemprop="name" content="John Doe">
+      <meta itemprop="description" content="">
+      <meta itemprop="image" content="/images/avatar.gif">
+    </span>
+
+    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
+      <meta itemprop="name" content="tiramisu-navy">
+    </span>
+
     
-    
-    <div class="post-block page">
       <header class="post-header">
 
-	<h1 class="post-title" itemprop="name headline"></h1>
-
-
-
-</header>
-
-      
-      
-      
-      <div class="post-body">
         
         
-          <h2 id="个人简介"><a href="#个人简介" class="headerlink" title="个人简介"></a>个人简介</h2><ul>
-<li><strong>坐标：</strong>  杭州</li>
-<li><strong>公司：</strong> 宝宝树杭州分公司</li>
-<li><strong>岗位：</strong> Java攻城狮</li>
-<li><strong>QQ &amp; Wechat：</strong> 770439312</li>
-<li><strong>座右铭：</strong> Every day to be a little better</li>
-</ul>
-
+          <h1 class="post-title" itemprop="name headline"></h1>
         
-      </div>
+
+        <div class="post-meta">
+          <span class="post-time">
+            
+              <span class="post-meta-item-icon">
+                <i class="fa fa-calendar-o"></i>
+              </span>
+              
+                <span class="post-meta-item-text">Posted on</span>
+              
+              <time title="Post created" itemprop="dateCreated datePublished" datetime="2019-01-03T10:58:29+08:00">
+                2019-01-03
+              </time>
+            
+
+            
+
+            
+          </span>
+
+          
+
+          
+            
+          
+
+          
+          
+
+          
+
+          
+
+          
+
+        </div>
+      </header>
+    
+
+    
+    
+    
+    <div class="post-body" itemprop="articleBody">
+
       
       
+
+      
+        <hr>
+<p>title: 逻辑回归模型–信用卡交易数据异常检测</p>
+<h3 id="1-原始数据"><a href="#1-原始数据" class="headerlink" title="1.原始数据"></a>1.原始数据</h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line">import pandas as pd</span><br><span class="line">import matplotlib.pyplot as plt</span><br><span class="line">import numpy as np</span><br><span class="line"></span><br><span class="line">data = pd.read_csv(&quot;creditcard.csv&quot;)</span><br><span class="line">print(&quot;前5行数据:\n&quot;,data.head())</span><br><span class="line"></span><br><span class="line"># 统计列Class不同值的个数并且升序排序</span><br><span class="line">count_classes = pd.value_counts(data[&apos;Class&apos;], sort=True).sort_index()</span><br><span class="line"># 条形图</span><br><span class="line">count_classes.plot(kind=&apos;bar&apos;)</span><br><span class="line">plt.title(&quot;Fraud class histogram&quot;)</span><br><span class="line">plt.xlabel(&quot;Class&quot;)</span><br><span class="line">plt.ylabel(&quot;Frequency&quot;)</span><br><span class="line">plt.show()</span><br><span class="line"># 结果发现样本Class=0数据量&gt;250000,而Class=1数据量&lt;1000</span><br></pre></td></tr></table></figure>
+<h3 id="2-样本不均衡采用的方法"><a href="#2-样本不均衡采用的方法" class="headerlink" title="2.样本不均衡采用的方法"></a>2.样本不均衡采用的方法</h3><h4 id="2-1-过采样–让两个样本同样多"><a href="#2-1-过采样–让两个样本同样多" class="headerlink" title="2.1 过采样–让两个样本同样多"></a>2.1 过采样–让两个样本同样多</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"># Amount列数值分布不均衡</span><br><span class="line"># 数据进行变换  例子：[2,3] reshape [-1,2]  分成2列,自动计算为3行</span><br><span class="line">data[&apos;normAmount&apos;] = StandardScaler().fit_transform(data[&apos;Amount&apos;].values.reshape(-1, 1))</span><br><span class="line"># 去掉无用的两列,得到特征数据</span><br><span class="line">data = data.drop([&apos;Time&apos;,&apos;Amount&apos;],axis=1)</span><br><span class="line">print(&quot;去掉两列之后:\n&quot;,data.head())</span><br></pre></td></tr></table></figure>
+<h4 id="2-2-下采用–让两个样本同样少"><a href="#2-2-下采用–让两个样本同样少" class="headerlink" title="2.2 下采用–让两个样本同样少"></a>2.2 下采用–让两个样本同样少</h4>
       
     </div>
     
     
     
+
+    
+
+    
+
+    
+
+    <footer class="post-footer">
+      
+
+      
+      
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2018/12/14/impl_logistic_regression/" rel="next" title="算法数学理论—梯度下降实现逻辑回归">
+                <i class="fa fa-chevron-left"></i> 算法数学理论—梯度下降实现逻辑回归
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </div>
+  
+  
+  
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
 
 
@@ -382,7 +483,7 @@
             
 
             
-              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#个人简介"><span class="nav-number">1.</span> <span class="nav-text">个人简介</span></a></li></ol></div>
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-3"><a class="nav-link" href="#1-原始数据"><span class="nav-number">1.</span> <span class="nav-text">1.原始数据</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-样本不均衡采用的方法"><span class="nav-number">2.</span> <span class="nav-text">2.样本不均衡采用的方法</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#2-1-过采样–让两个样本同样多"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 过采样–让两个样本同样多</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#2-2-下采用–让两个样本同样少"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 下采用–让两个样本同样少</span></a></li></ol></li></ol></div>
             
 
           </div>
